@@ -25,4 +25,13 @@
     <url-pattern>/login</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>mainServlet</servlet-name>
+    <servlet-class>com.playdata.todos.servlet.MainServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>mainServlet</servlet-name>
+    <url-pattern>/main</url-pattern>
+  </servlet-mapping>
+
 </web-app>

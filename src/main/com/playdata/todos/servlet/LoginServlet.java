@@ -26,11 +26,11 @@ public class LoginServlet extends HttpServlet {
 
         if(login==null){
             System.out.println("로그인 실패");
+            resp.sendRedirect("/user");
         }else {
             System.out.println("로그인 완료");
+            resp.sendRedirect("/main");
         }
-
-        resp.sendRedirect("/");
 
     }
 

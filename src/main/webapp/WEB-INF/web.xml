@@ -52,4 +52,22 @@
     <url-pattern>/after</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>todosServlet</servlet-name>
+    <servlet-class>com.playdata.todos.servlet.ToDosServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>todosServlet</servlet-name>
+    <url-pattern>/todos</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>userUpdateServlet</servlet-name>
+    <servlet-class>com.playdata.todos.servlet.userUpdateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>userUpdateServlet</servlet-name>
+    <url-pattern>/userUpdate</url-pattern>
+  </servlet-mapping>
+
 </web-app>

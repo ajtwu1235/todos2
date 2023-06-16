@@ -10,6 +10,8 @@ import java.sql.SQLException;
 
 public class UserDao {
 
+    public User me =null;
+
     private static final UserDao instance = new UserDao();
 
     private UserDao() {
@@ -56,6 +58,8 @@ public class UserDao {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+
+        me=user;
         
         return user;
     }

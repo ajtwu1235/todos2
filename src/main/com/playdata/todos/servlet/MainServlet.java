@@ -31,7 +31,7 @@ public class MainServlet extends HttpServlet {
         }
 
         HttpSession session = req.getSession();
-        Object uname1 = session.getAttribute("uname");
+        Object uname1 = session.getAttribute("1");
 
 
         String result="";
@@ -57,6 +57,7 @@ public class MainServlet extends HttpServlet {
                 "  <h1> "+ result+"환영합니다</h1>\n" +uname1+
                 // 뒤로가기 경로
                 "  <a href="+back+"> 뒤로가기</a>\n"+
+                        "  <a href=/todos> 할일 입력 하러가기</a>\n"+
                 "  <img src=\"/img/ffsf_360.png\">\n" +
                 "\n" +
                 "</body>\n" +

@@ -32,8 +32,10 @@ public class LoginServlet extends HttpServlet {
 //        //유통기한 제한
 //        cookie.setMaxAge(10);
 
+
+        // 로그인정보담은 세션 생성 Key: 유저 아이디 , Value: 유저 정보
         HttpSession session = req.getSession();
-        session.setAttribute("uname",login.getName().toString());
+        session.setAttribute(login.getId()+"",login);
 
         if(login==null){
             System.out.println("로그인 실패");

@@ -34,4 +34,22 @@
     <url-pattern>/main</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>backServlet</servlet-name>
+    <servlet-class>com.playdata.todos.servlet.BackServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>backServlet</servlet-name>
+    <url-pattern>/back</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>afterServlet</servlet-name>
+    <servlet-class>com.playdata.todos.servlet.AfterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>afterServlet</servlet-name>
+    <url-pattern>/after</url-pattern>
+  </servlet-mapping>
+
 </web-app>

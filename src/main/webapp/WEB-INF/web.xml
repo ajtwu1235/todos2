@@ -7,6 +7,21 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
   <display-name>Archetype Created Web Application</display-name>
+
+  <filter>
+    <filter-name>setCharacterEncodingFilter</filter-name>
+    <filter-class>org.apache.catalina.filters.SetCharacterEncodingFilter</filter-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>UTF-8</param-value>
+    </init-param>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>setCharacterEncodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
   <servlet>
     <servlet-name>userServlet</servlet-name>
     <servlet-class>com.playdata.todos.servlet.UserServlet</servlet-class>
@@ -60,14 +75,13 @@
     <servlet-name>todosServlet</servlet-name>
     <url-pattern>/todos</url-pattern>
   </servlet-mapping>
-
   <servlet>
-    <servlet-name>userUpdateServlet</servlet-name>
-    <servlet-class>com.playdata.todos.servlet.userUpdateServlet</servlet-class>
-  </servlet>
+  <servlet-name>todoUpdate</servlet-name>
+  <servlet-class>com.playdata.todos.servlet.ToDoUpdateServlet</servlet-class>
+</servlet>
   <servlet-mapping>
-    <servlet-name>userUpdateServlet</servlet-name>
-    <url-pattern>/userUpdate</url-pattern>
+    <servlet-name>todoUpdate</servlet-name>
+    <url-pattern>/todoUpdate</url-pattern>
   </servlet-mapping>
 
 </web-app>

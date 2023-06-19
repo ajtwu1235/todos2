@@ -1,12 +1,15 @@
 package com.playdata.todos.servlet;
 
 import com.playdata.todos.config.History;
+import com.playdata.todos.dao.ToDoDao;
 import com.playdata.todos.dao.UserDao;
+import com.playdata.todos.dto.TodoJoinUser;
 import com.playdata.todos.dto.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
 import java.io.IOException;
+import java.util.List;
 
 public class LoginServlet extends HttpServlet {
 
@@ -35,7 +38,7 @@ public class LoginServlet extends HttpServlet {
 
         // 로그인정보담은 세션 생성 Key: 유저 아이디 , Value: 유저 정보
         HttpSession session = req.getSession();
-        session.setAttribute(login.getId()+"",login);
+        session.setAttribute("uid",login);
 
         if(login==null){
             System.out.println("로그인 실패");
@@ -44,6 +47,8 @@ public class LoginServlet extends HttpServlet {
             System.out.println("로그인 완료");
             resp.sendRedirect("/main");
         }
+
+
 
     }
 
